@@ -125,7 +125,22 @@
 					},
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Carlos A. Ramírez\",\r\n  \"email\": \"carlos.ramirez@example.com\",\r\n  \"direccion\": {\r\n    \"calle\": \"Carrera 12 #9-45\",\r\n    \"ciudad\": \"Medellín\",\r\n    \"codigoPostal\": \"050021\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:8080/clientes/1",
 							"protocol": "http",
